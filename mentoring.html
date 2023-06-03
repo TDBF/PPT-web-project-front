@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Shopping</title>
+    <style>
+
+    /*스크롤 top bottom*/
+    #header{
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+            color: #e0eaff;
+        }
+    #scroll-to-top {
+        position: fixed;
+        bottom: 75px;
+        right: 20px;
+        width: 60px;
+        height: 50px;
+        background-color: #6172f3;
+        color: #e0eaff;
+        text-align: center;
+    }
+    #scroll-to-bottom {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 50px;
+        background-color: #6172f3;
+        color: #e0eaff;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #6172f3;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        float: left;
+        font-weight: bolder;
+    }
+
+    li a {
+        display: block;
+        color: #e0eaff;
+        text-align: center;
+        padding: 14px 25px;
+        text-decoration: none;
+    }
+
+    .imgTable{
+        display: flex;
+        justify-content: center;
+    }
+    div div tr td div img{
+        width: 200px;
+        height: 200px;
+    }
+    div div tr td div{
+        border: 2px solid #000;
+        text-align: center;
+    }
+    div div tr td div:hover{
+        border: 2px solid red;
+    }
+    li a:hover {
+        color: #8098f9;
+    }
+    </style>
+</head>
+
+
+
+<body style="background-color: #f5f8ff;">
+    <div id="scroll-to-top" onclick="scrollToTop()">
+        <p>top</p>
+    </div>
+    <div id="scroll-to-bottom" onclick="scrollToBottom()">
+        <p>bottom</p>
+    </div>  
+    <div id="header">
+        <img src="pptlogo.png" alt="no logo" height="100px">
+    </div>
+
+    <div><img src="m2.jpg" alt="img is none" style="text-align: center;" width=100% height="auto"></div>
+    <div id="header">
+        <hr style="border-color: #6172f3;">
+        <ul>
+            <li><a href="#mentoring" id="hMentoring">Mentoring</a></li>
+            <li><a href="#learning" id="hLearning">Learning</a></li>
+            <li><a href="#teaching" id="hTeaching">Teaching</a></li>
+            <li><a href="#myPage" id="hMyPage">My Page</a></li>
+        </ul>
+        <hr style="border-color: #6172f3;">
+    </div>
+
+    <div style="float: left; width: 10%;"><p></p></div>
+    <div style="float: left; width: 80%;">
+
+        <div id="mentor">
+            <table class="imgTable">
+                <tr>
+                    <td colspan="4">
+                        <h2><b>Recommended Mentor</b></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor1.jpg" class="myImage" data-original-src="mentor1.jpg" >
+                            <p class="myParagraph">mentor1 </p><p class="myPrice">4$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)" >
+                            <img src="mentor2.jpg" class="myImage" data-original-src="mentor2.jpg">
+                            <p class="myParagraph">mentor2</p><p class="myPrice">4$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor3.jpg" class="myImage" data-original-src="mentor3.jpg">
+                            <p class="myParagraph">mentor3</p><p class="myPrice">5$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor4.jpg" class="myImage" data-original-src="mentor4.jpg">
+                            <p class="myParagraph">mentor4</p><p class="myPrice">7$</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor5.jpg" class="myImage" data-original-src="mentor5.jpg">
+                            <p class="myParagraph">mentor5</p><p class="myPrice">5$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor6.jpg" class="myImage" data-original-src="mentor6.jpg">
+                            <p class="myParagraph">mentor6</p><p class="myPrice">6$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor7.jpg" class="myImage" data-original-src="mentor7.jpg">
+                            <p class="myParagraph">mentor7</p><p class="myPrice">6$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor8.jpg" class="myImage" data-original-src="mentor8.jpg">
+                            <p class="myParagraph">mentor8</p><p class="myPrice">5$</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor9.jpg" class="myImage" data-original-src="mentor9.jpg">
+                            <p class="myParagraph">mentor9</p><p class="myPrice">5$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor10.jpg" class="myImage" data-original-src="mentor10.jpg">
+                            <p class="myParagraph">mentor10</p><p class="myPrice">7$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor11.jpg" class="myImage" data-original-src="mentor11.jpg">
+                            <p class="myParagraph">mentor11</p><p class="myPrice">4$</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="myDiv" onclick="toggleContent(this)">
+                            <img src="mentor12.jpg" class="myImage" data-original-src="mentor12.jpg">
+                            <p class="myParagraph">mentor12</p><p class="myPrice">5$</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <h4 style="background-color: aquamarine; height: 30px; text-align: center;" onclick="buy()"><b> BUY</b></h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div style="float: left; width: 10%;"><p></p></div>
+    <div style="clear: both; background-color: greenyellow; text-align: center;">
+        <p>This is WebProgramming Homework</p>
+    </div>
+
+
+        <script>
+            var divs = document.getElementsByClassName("myDiv");
+
+            function buy() {
+                var redDivs = document.querySelectorAll(".myDiv[style='background-color: red;']");
+                if (redDivs.length === 0) {
+                    alert("Please select an item!");
+                    return;
+                }
+
+                var redDivContents = [];
+                var totalAmount = 0;
+
+                redDivs.forEach(function (div) {
+                    var paragraph = div.querySelector(".myParagraph");
+                    var priceElement = div.querySelector("p:last-of-type");
+                    var content = paragraph.innerText.trim();
+                    var price = parseFloat(priceElement.innerText.trim().replace("$", ""));
+
+                    redDivContents.push(content);
+                    totalAmount += price;
+                });
+
+                var count = redDivContents.length;
+                var message = redDivContents.join(", ");
+                message += " is(are) selected\n\n";
+                message += "Total: " + totalAmount.toFixed(2) + "$";
+
+                alert(message);
+            }
+
+
+            function toggleContent(div) {
+                var paragraph = div.querySelector(".myParagraph");
+                var image = div.querySelector(".myImage");
+                var price = div.querySelector(".myPrice");
+
+                var originalImg = image.dataset.originalSrc;
+                var currentImg = image.src;
+
+                if (div.style.backgroundColor === "red") {
+                    // 이미지와 배경색 원래대로 되돌리기
+                    div.style.backgroundColor = "";
+                    image.src = originalImg;
+                    paragraph.style.fontWeight = "";
+                    price.style.fontWeight = "";
+                } else {
+                    // p 요소의 배경색 변경
+                    div.style.backgroundColor = "red";
+                    paragraph.style.fontWeight = "bold";
+                    price.style.fontWeight = "bold";
+                    // 이미지 변경
+                    if (currentImg.includes("checked.jpg")) {
+                        image.src = originalImg;
+                    } else {
+                        image.src = "checked.jpg";
+                    }
+                }
+            }
+
+
+
+
+
+            function scrollToTop() {
+                document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+            }
+            function scrollToBottom() {
+            var divList = document.getElementsByTagName('div');
+            var lastDiv = divList[divList.length - 1];
+            lastDiv.scrollIntoView();
+            }
+
+        </script>
+</body>
+</html>
